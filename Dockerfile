@@ -1,4 +1,4 @@
-FROM maven:3.6.1-jdk-11 AS build
+FROM maven:3.6.1-jdk-13 AS build
 RUN mkdir -p /workspace
 WORKDIR /workspace
 COPY pom.xml /workspace

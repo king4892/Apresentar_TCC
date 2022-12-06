@@ -79,8 +79,10 @@ public class EstoqueController {
 		ModelAndView mv = new ModelAndView("cadastro/cadastro_estoque");
 		mv.addObject("estoques", estoque);
 
-		List<String> tipoDeEstoque = Arrays.asList("Selecione..", "Camara Fria", "Paletes", "Prateleiras", "Balcao",
-				"Area Ventilada");
+		List<String> tipoDeEstoque = Arrays.asList("Selecione..", "PERECIVEIS", "MERCEARIA DOCE", 
+				"MERCEARIA SALGADA", "MERCEARIA SECA",
+				"ACOUGUE", "HORTIFRUTI", "LIMPEZA", "PERFUMARIA", "BEBIDAS", "SALGADOS",
+				"PADARIA", "BAZAR", "TEXTIL", "IMOBILIZADOS", "DIVERSOS");
 		mv.addObject("tipoEstoque", tipoDeEstoque);
 
 		return mv;
@@ -235,6 +237,14 @@ public class EstoqueController {
 	            ex.printStackTrace();
 	        }
 	    }
+
+	public EstoqueService getEstoqueService() {
+		return estoqueService;
+	}
+
+	public void setEstoqueService(EstoqueService estoqueService) {
+		this.estoqueService = estoqueService;
+	}
 
 
 	
